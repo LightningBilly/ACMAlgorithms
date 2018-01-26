@@ -1,16 +1,17 @@
 #include<stdio.h>
-#include<iostream>
-#include<vector>
 #include<cstring>
+#include<string>
+#include<vector>
+#include<iostream>
 #include<algorithm>
 using namespace std;
 
-const int N = 100000+10;
-typedef long long lld;
+const int N=200+3;
+
 
 typedef struct BigNum
 {
-	const static int MAXLEN = 200+10;//数字的最长长度
+	const static int MAXLEN = 500+10;//数字的最长长度
 	int numarr[MAXLEN];//数组每一位存一个数字
 	int len;//数字实际长度
 
@@ -51,6 +52,7 @@ typedef struct BigNum
             numarr[len++]=s%10;
             s/=10;
         }
+		
 	}
 
 	void clearLeadingZero()
@@ -213,87 +215,63 @@ typedef struct BigNum
 	void printDigits() const
 	{
 		int i=len;
+		//cout<<i<<endl;
 		while(i--) cout<<numarr[i];
 	}
 
 }BigNum;
 
-char ch[1010];
-BigNum arr[1010];
-int arrlen=0;
+BigNum arr[N];
 
-void getFibs(){
-	arr[0]=BigNum("0");
-	arr[1]=BigNum("1");
-	arr[2]=BigNum("2");
-	int i=0;
-	for(i=3;;i++)
+void getFac(){
+	arr[0]=BigNum("1");
+	int i=1;
+	for(i=1;i<N;i++)
 	{
-		arr[i] = arr[i-1]+arr[i-2];
-		if(arr[i].len>100)break;
+		arr[i]=arr[i-1] * BigNum(i);
+		//printf("%d\n", i);
+		/*
+		if(i<20){
+			cout<<i<<":";
+			arr[i].printDigits();
+			puts("");
+		}
+		*/
 	}
-	arrlen=i;
 }
 
-int getUpper(const BigNum &b)
+BigNum ans[N];
+bool vis[N]={0};
+
+void getAns(int x)
 {
-	int ans=0;
-	int l=0, r=arrlen-1;
+	if(vis[x])return;
+	vis[x]=1;
 
-	while(l<=r)
-	{
-		int mid = l+r>>1;
-		if(arr[mid]<b)
-		{
-			ans=max(ans, mid);
-			l=mid+1;
-		}
-		else r=mid-1;
-	}
-
-	return ans;
+	ans[x]=arr[x-1] * BigNum(2);
 }
 
 void solve()
 {
-	getFibs();
-	//cout<<arrlen;
-	BigNum z("0");
-	while(scanf("%s", ch)!=EOF)
+	int n;
+	getFac();
+	/*
+	arr[199].printDigits();
+	puts("");
+	arr[21].printDigits();
+	puts("");
+	*/
+	while(scanf("%d", &n)!=EOF && n!=-1)
 	{
-		BigNum a(ch);
-		scanf("%s", ch);
-		BigNum b(ch);
-		if(a==z && b==z) break;
-
-		int l=getUpper(a);
-		int r = getUpper(b+BigNum("1"));
-		printf("%d\n", r-l);
+		printf("N=%d:\n", n);
+		getAns(n);
+		ans[n].printDigits();
+		puts("");
 	}
 }
 
 int main()
 {
-    solve();
-    return 0;
+	solve();
+	return 0;
 }
-
-/*
-10101 1023
-894 341
-7 5
-5 2
-2 1
-4 10
-10 3
-3 1
-6 8
-8 9
-9 1
-
-999999999999999999999999999999999999999999999999999999999999
-999999999999999999999999999999999999999999999999999999999999
-
-*/
-
-
