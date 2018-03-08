@@ -10,7 +10,7 @@ typedef long long lld;
 
 typedef struct BigNum
 {
-	const static int MAXLEN = 200+10;//数字的最长长度
+	const static int MAXLEN = 100+10;//数字的最长长度
 	int numarr[MAXLEN];//数组每一位存一个数字
 	int len;//数字实际长度
 
@@ -22,7 +22,17 @@ typedef struct BigNum
     //以数字字符串初始化一个大数
 	BigNum(const string &s)
 	{
-		int i=0;
+		setValue(s);
+	}
+
+	BigNum(int s)
+	{
+	    setValue(s);
+	}
+
+	void setValue(const string & s)
+	{
+	    int i=0;
 		int ls=s.length();
 
 		while(i<ls-1 && s[i]=='0')++i;
@@ -36,11 +46,11 @@ typedef struct BigNum
 		reverse(numarr, numarr+len);
 	}
 
-	BigNum(int s)
+	void setValue(int s)
 	{
 	    if(s==0)
         {
-            BigNum();
+            setValue("0");
             return;
         }
 
@@ -77,7 +87,7 @@ typedef struct BigNum
 
 		return res;
 	}
-
+/*
 	//加法
 	BigNum operator + (const int b)
 	{
@@ -94,7 +104,7 @@ typedef struct BigNum
 
 		return res;
 	}
-
+*/
     //减法
 	BigNum operator - (const BigNum &b) //被减数要大于减数
 	{
@@ -157,7 +167,8 @@ typedef struct BigNum
 
         res.len = this->len;
         res.clearLeadingZero();
-        return {res, mod};
+        //return {res, mod};
+        return make_pair(res, mod);
     }
 
 	//除法
@@ -213,6 +224,7 @@ typedef struct BigNum
 	void printDigits() const
 	{
 		int i=len;
+		//cout<<i<<endl;
 		while(i--) cout<<numarr[i];
 	}
 
