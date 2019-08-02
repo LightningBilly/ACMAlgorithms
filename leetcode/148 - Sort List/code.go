@@ -3,6 +3,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
+//查找到一半，不用严格一半，利用步进法
 func findHalf(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return head
@@ -10,7 +11,7 @@ func findHalf(head *ListNode) *ListNode {
 	step2 := head.Next.Next
 
 	for ; step2 != nil; head = head.Next {
-		step2 = step2.Next
+		step2 = step2.Next //step2每次走2步
 		if step2 != nil {
 			step2 = step2.Next
 		}
