@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bytedance/CLionProjects/glTriangle/main.cpp
+glew/2.2.0_1/include/GL/glew.h
+/Users/bytedance/CLionProjects/glTriangle/glew/2.2.0_1/include/GL/glew.h
+glfw/3.3.4/include/GLFW/glfw3.h
+/Users/bytedance/CLionProjects/glTriangle/glfw/3.3.4/include/GLFW/glfw3.h
+iostream
+-
+model.h
+/Users/bytedance/CLionProjects/glTriangle/model.h
+cmath
+-
+
+/Users/bytedance/CLionProjects/glTriangle/model.h
+vector
+-
+sstream
+-
+iostream
+-
+unordered_map
+-
+map
+-
+glew/2.2.0_1/include/GL/glew.h
+/Users/bytedance/CLionProjects/glTriangle/glew/2.2.0_1/include/GL/glew.h
+

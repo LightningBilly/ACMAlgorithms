@@ -13,6 +13,17 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     std::cout<<"ESC"<<mode;
 }
 
+double sx=0, sy=0;
+
+void mouse_click(GLFWwindow* window, int button, int action, int mods) {
+    cout<<button<<","<<action<<","<<mods<<endl;
+    double xpos, ypos;
+    glfwGetCursorPos(window, &xpos, &ypos);
+    sx = xpos/300-1;
+    sy = -(ypos/300-1);
+    cout<<xpos/300-1<<","<<ypos/300-1<<endl;
+    cout<<xpos<<","<<ypos<<endl;
+}
 
 
 int main(void) {
@@ -30,6 +41,7 @@ int main(void) {
     glfwMakeContextCurrent(window);
 
     glfwSetKeyCallback(window, key_callback); //注册回调函数
+    glfwSetMouseButtonCallback(window, mouse_click);
     //glViewport(0, 0, 400, 400);
     //gluOrtho2D(-200, 200.0, -200, 200.0);
     //循环，直到用户关闭窗口
@@ -47,6 +59,15 @@ int main(void) {
         // glColor3f(0,0, 0);
         glMatrixMode(GL_PROJECTION);
         om.objDraw();
+        glColor3f(1, 0, 0); //Red
+        glPointSize(10);
+        glBegin(GL_POINTS);
+
+        glVertex3d(-0.7, -0.7, 0);
+        glVertex3d(sx, sy, 0);
+        glEnd();
+        glFlush();
+
 
 /*
         //开始画一个三角形

@@ -1,0 +1,13 @@
+# Blender v2.66 (sub 1) OBJ File: 'BR_Squirtle.blend'
+# www.blender.org
+o zenigame
+v -0.3 0 0.2
+v 0.3 0 0.2
+v 0 0 -0.4
+v 0 0.6 0
+usemtl mat_0
+s 1
+f 1/1 2/2 3/3
+f 4/1 1/4 3/2
+f 4/5 2/4 1/1
+f 4/5 3/6 2/4
