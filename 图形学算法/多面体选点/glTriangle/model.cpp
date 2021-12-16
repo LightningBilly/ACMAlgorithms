@@ -294,6 +294,15 @@ void ObjectModel::objDraw()
     glEnd();
 
 
+    glColor3f(0, 0, 1);
+
+    glPointSize(10);
+    glBegin(GL_POINTS);
+    for (auto p : points) {
+        glVertex3dv(p.BackupData);
+    }
+    glEnd();
+
 }
 void ObjectModel::setTextureFromBmp(const char * texFileName) {
     // mTexture = CreateTexture2DFromBMP(texFileName);
@@ -332,6 +341,55 @@ void ObjectModel::pointTrance() {
     }
 }
 
+Vector3 ObjectModel::getPointWithLine(Vector3 start, Vector3 unitV) {
+    double t=100;
+    for(auto p:faces) {
+        // 求出与面的交点
+        Vector3 A(points[p.points[0]].BackupData),
+        B(points[p.points[1]].BackupData),
+        C(points[p.points[2]].BackupData);
+
+
+        auto N = (B-A)^(C-A);
+        if(fabs(unitV*N)<1e-6)continue;
+        double ct=-(start-C)*N/(unitV*N);
+
+        // 判断点是否在三角形内
+        if(ct<t &&PointinTriangle(A, B, C, start+(ct*unitV))){
+            t=ct;
+        }
+    }
+
+    if(t<99) return start+t*unitV;
+    return Vector3(0,0,t); // 没有交点
+}
+
+void ObjectModel::addPoint(Vector3 v) {
+    Point p;
+
+    p.Data[0]=v.x;
+    p.Data[1]=v.y;
+    p.Data[2]=v.z;
+    // x轴旋转
+    double xtheta = -angx/180*3.14;
+
+    p.Data[0]=v.x;
+    p.Data[1] = v.y*cos(xtheta) - v.z* sin(xtheta);
+    p.Data[2] = v.y*sin(xtheta) + v.z* cos(xtheta);
+
+
+    // y轴旋转
+    double ytheta = -angy/180*3.14;
+    // cout<<"trance - angy" << angx<<endl;
+    v.x = p.Data[2]*sin(ytheta) + p.Data[0]* cos(ytheta);
+    v.y = p.Data[1];
+    v.z = p.Data[2]*cos(ytheta) - p.Data[0]* sin(ytheta);
+    p.Data[0]=v.x;
+    p.Data[1]=v.y;
+    p.Data[2]=v.z;
+
+    points.push_back(p);
+}
 
 // vector3
 Vector3 Vector3::operator - (Vector3 v) {
@@ -352,6 +410,10 @@ Vector3 Vector3::operator ^ (Vector3 v) {
 
 double Vector3::operator * (Vector3 v)  {
     return x*v.x+y*v.y+z*v.z;
+}
+
+Vector3  operator * (double t, Vector3 v)  {
+    return Vector3(t*v.x, t*v.y, t*v.z);
 }
 
 

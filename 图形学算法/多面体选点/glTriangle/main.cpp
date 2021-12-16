@@ -7,6 +7,9 @@ using namespace std;
 
 #define  ColoredVertex(c,v) do{ glColor3fv(c); glVertex3fv(v); }while(0)
 
+char *path = "/Users/bytedance/CLionProjects/glTriangle/d.txt";
+ObjectModel om(path);
+
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode)
 {
     //如果按下ESC，把windowShouldClose设置为True，外面的循环会关闭应用
@@ -34,6 +37,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 
 int moving = 0;
 double sx=0, sy=0, angy=0, angx=0;
+Vector3 select;
 
 void mouse_click(GLFWwindow* window, int button, int action, int mods) {
     cout<<button<<","<<action<<","<<mods<<endl;
@@ -44,6 +48,13 @@ void mouse_click(GLFWwindow* window, int button, int action, int mods) {
     cout<<xpos/300-1<<","<<1-ypos/300<<endl;
     cout<<xpos<<","<<ypos<<endl;
     moving = action;
+    if(action==0) {
+        select = om.getPointWithLine(Vector3(xpos / 300 - 1, 1 - ypos / 300, -1), Vector3(0, 0, 1));
+        select.Out();
+        if(select.z<99) {
+            om.addPoint(select);
+        }
+    }
 }
 
 
@@ -145,8 +156,6 @@ int main(void) {
     //循环，直到用户关闭窗口
     cout<<123<<endl;
 
-    char *path = "/Users/bytedance/CLionProjects/glTriangle/d.txt";
-    ObjectModel om(path);
 
     while (!glfwWindowShouldClose(window)) {
         /*******轮询事件*******/

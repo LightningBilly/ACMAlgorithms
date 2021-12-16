@@ -13,10 +13,9 @@ using namespace std;
 #define GLTRIANGLE_MODEL_H
 
 unsigned char*LoadFileContent(const char*path, int &filesize);
-
 class Vector3 {
-    double x,y,z;
 public:
+    double x,y,z;
     Vector3(){}
     Vector3(double a, double b, double c):x(a), y(b), z(c){}
     Vector3(double v[3]):x(v[0]), y(v[1]), z(v[2]){}
@@ -25,8 +24,14 @@ public:
     Vector3 operator + (Vector3 v) ;
     double operator * (Vector3 v) ;
     Vector3 operator ^ (Vector3 v);
+    friend Vector3 operator * (double t, Vector3 v) ;
+    void Out() {
+        cout<<x<<","<<y<<","<<z<<endl;
+    }
 };
 
+Vector3 operator * (double t, Vector3 v) ;
+bool PointinTriangle(Vector3 A, Vector3 B, Vector3 C, Vector3 P);
 /*
  * 存储点坐标
  * 邻接表法存储邻接点
@@ -80,7 +85,9 @@ public:
     void objDraw();
     void addFace(Face face);
     int addEdge(int p1,int p2);
+    void addPoint(Vector3 v);
     double distance(int p1, int p2);
+    Vector3 getPointWithLine(Vector3 start, Vector3 unitV);
     vector<Point> points; // 点集
     vector<Edge> edges;
     vector<Face> faces;
