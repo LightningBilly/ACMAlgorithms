@@ -149,11 +149,9 @@ ObjectModel::ObjectModel(const char * objFileName)
                     ssOneLine >> temp;
                     Point tempLocation;
                     ssOneLine >> tempLocation.Data[0] >> tempLocation.Data[1] >> tempLocation.Data[2];
-                    /*
                     tempLocation.Data[0]/=5;
                     tempLocation.Data[1]/=5;
                     tempLocation.Data[2]/=5;
-                     */
                     points.push_back(tempLocation);
                 }
             }
@@ -263,7 +261,7 @@ void ObjectModel::objDraw()
     {
         i++;
 
-        // glColor3dv(points[faceIndex->points[1]].Data);
+        glColor3dv(points[faceIndex->points[1]].Data);
         //第一个点的法线，纹理，位置信息
         // glNormal3fv(mNormal[faceIndex->vertex[0][2]-1].Data);
         //glTexCoord2dv(texcoord[faceIndex->texcoord[0]].Data);
@@ -352,7 +350,6 @@ void ObjectModel::pointTrance() {
     }
 }
 
-// 普通方法，先求交再判断是否在三解形内
 Vector3 ObjectModel::getPointWithLine(Vector3 start, Vector3 unitV) {
     double t=100;
     for(auto p:faces) {
@@ -373,38 +370,6 @@ Vector3 ObjectModel::getPointWithLine(Vector3 start, Vector3 unitV) {
     }
 
     if(t<99) return start+t*unitV;
-    return Vector3(0,0,t); // 没有交点
-}
-
-// 行列式法
-Vector3 ObjectModel::getPointWithLineTrumBore(Vector3 O, Vector3 D) {
-    double t=100;
-    for(auto p:faces) {
-        // 求出与面的交点
-        Vector3 P0(points[p.points[0]].BackupData),
-                P1(points[p.points[1]].BackupData),
-                P2(points[p.points[2]].BackupData);
-
-
-        auto E1 = P1-P0;
-        auto E2 = P2-P0;
-        auto S = O-P0;
-        double det = (D^E2)*E1;
-
-        if(fabs(det)<1e-6)continue;
-        double ct = S*(E1^E2)/det;
-        double b1 = S*(D^E2)/det;
-        double b2 = E1*(D^S)/det;
-
-        if(ct<0 || b1<0||b2<0 || 1-b1-b2<0)continue;
-
-        // 判断点是否在三角形内
-        if(ct<t){
-            t=ct;
-        }
-    }
-
-    if(t<99) return O+t*D;
     return Vector3(0,0,t); // 没有交点
 }
 

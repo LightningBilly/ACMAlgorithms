@@ -1,0 +1,3 @@
+/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/CMakeFiles/glTriangle.dir

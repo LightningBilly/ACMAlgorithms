@@ -88,7 +88,6 @@ public:
     void addPoint(Vector3 v);
     double distance(int p1, int p2);
     Vector3 getPointWithLine(Vector3 start, Vector3 unitV);
-    Vector3 getPointWithLineTrumBore(Vector3 start, Vector3 unitV);
     vector<Point> points; // 点集
     vector<Edge> edges;
     vector<Face> faces;
