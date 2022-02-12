@@ -41,6 +41,7 @@ CMakeFiles/MeshWork.dir/PolyMesh/PolyMesh_Base.cpp.o: ../PolyMesh/PolyMesh_Base.
 
 CMakeFiles/MeshWork.dir/main.cpp.o: ../main.cpp
 CMakeFiles/MeshWork.dir/main.cpp.o: ../src/hw1/hw1.h
+CMakeFiles/MeshWork.dir/main.cpp.o: ../src/hw2/hw2.h
 
 CMakeFiles/MeshWork.dir/src/hw1/Algorithm.cpp.o: ../Math/MPoint3.h
 CMakeFiles/MeshWork.dir/src/hw1/Algorithm.cpp.o: ../Math/MVector3.h
@@ -66,4 +67,16 @@ CMakeFiles/MeshWork.dir/src/hw1/hw1.cpp.o: ../PolyMesh/PolyMesh_Base.h
 CMakeFiles/MeshWork.dir/src/hw1/hw1.cpp.o: ../src/hw1/Algorithm.h
 CMakeFiles/MeshWork.dir/src/hw1/hw1.cpp.o: ../src/hw1/hw1.cpp
 CMakeFiles/MeshWork.dir/src/hw1/hw1.cpp.o: ../src/hw1/hw1.h
+
+CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o: ../Math/MPoint3.h
+CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o: ../Math/MVector3.h
+CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o: ../Math/Massage.h
+CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o: ../Math/Mrgb.h
+CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o: ../PolyMesh/IOManager.h
+CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o: ../PolyMesh/MemoryPool.h
+CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o: ../PolyMesh/PolyMesh.h
+CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o: ../PolyMesh/PolyMeshIterators.h
+CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o: ../PolyMesh/PolyMesh_Base.h
+CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o: ../src/hw2/hw2.cpp
+CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o: ../src/hw2/hw2.h
 

@@ -312,6 +312,33 @@ src/hw1/hw1.cpp.s:
 	$(MAKE) -f CMakeFiles/MeshWork.dir/build.make CMakeFiles/MeshWork.dir/src/hw1/hw1.cpp.s
 .PHONY : src/hw1/hw1.cpp.s
 
+src/hw2/hw2.o: src/hw2/hw2.cpp.o
+
+.PHONY : src/hw2/hw2.o
+
+# target to build an object file
+src/hw2/hw2.cpp.o:
+	$(MAKE) -f CMakeFiles/MeshWork.dir/build.make CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o
+.PHONY : src/hw2/hw2.cpp.o
+
+src/hw2/hw2.i: src/hw2/hw2.cpp.i
+
+.PHONY : src/hw2/hw2.i
+
+# target to preprocess a source file
+src/hw2/hw2.cpp.i:
+	$(MAKE) -f CMakeFiles/MeshWork.dir/build.make CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.i
+.PHONY : src/hw2/hw2.cpp.i
+
+src/hw2/hw2.s: src/hw2/hw2.cpp.s
+
+.PHONY : src/hw2/hw2.s
+
+# target to generate assembly for a file
+src/hw2/hw2.cpp.s:
+	$(MAKE) -f CMakeFiles/MeshWork.dir/build.make CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.s
+.PHONY : src/hw2/hw2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -342,6 +369,9 @@ help:
 	@echo "... src/hw1/hw1.o"
 	@echo "... src/hw1/hw1.i"
 	@echo "... src/hw1/hw1.s"
+	@echo "... src/hw2/hw2.o"
+	@echo "... src/hw2/hw2.i"
+	@echo "... src/hw2/hw2.s"
 .PHONY : help
 
 

@@ -38,28 +38,10 @@ PolyMesh_Base.h
 PolyMesh.h
 /Users/bytedance/CLionProjects/MeshWork/PolyMesh/PolyMesh.h
 
-/Users/bytedance/CLionProjects/MeshWork/PolyMesh/IOManger.cpp
-IOManager.h
-/Users/bytedance/CLionProjects/MeshWork/PolyMesh/IOManager.h
-fstream
--
-sstream
--
-algorithm
--
-
 /Users/bytedance/CLionProjects/MeshWork/PolyMesh/MemoryPool.h
 vector
 -
 unordered_set
--
-
-/Users/bytedance/CLionProjects/MeshWork/PolyMesh/PolyMesh.cpp
-PolyMesh.h
-/Users/bytedance/CLionProjects/MeshWork/PolyMesh/PolyMesh.h
-assert.h
-/Users/bytedance/CLionProjects/MeshWork/PolyMesh/assert.h
-sstream
 -
 
 /Users/bytedance/CLionProjects/MeshWork/PolyMesh/PolyMesh.h
@@ -71,12 +53,6 @@ PolyMeshIterators.h
 /Users/bytedance/CLionProjects/MeshWork/PolyMesh/PolyMeshIterators.h
 MemoryPool.h
 /Users/bytedance/CLionProjects/MeshWork/PolyMesh/MemoryPool.h
-
-/Users/bytedance/CLionProjects/MeshWork/PolyMesh/PolyMeshIterators.cpp
-PolyMesh.h
-/Users/bytedance/CLionProjects/MeshWork/PolyMesh/PolyMesh.h
-PolyMeshIterators.h
-/Users/bytedance/CLionProjects/MeshWork/PolyMesh/PolyMeshIterators.h
 
 /Users/bytedance/CLionProjects/MeshWork/PolyMesh/PolyMeshIterators.h
 vector
@@ -94,47 +70,15 @@ PolyMesh_Base.h
 assert.h
 /Users/bytedance/CLionProjects/MeshWork/PolyMesh/assert.h
 
-/Users/bytedance/CLionProjects/MeshWork/main.cpp
-iostream
--
-stdio.h
--
-unistd.h
--
-src/hw1/hw1.h
-/Users/bytedance/CLionProjects/MeshWork/src/hw1/hw1.h
-
-/Users/bytedance/CLionProjects/MeshWork/src/hw1/Algorithm.cpp
-Algorithm.h
-/Users/bytedance/CLionProjects/MeshWork/src/hw1/Algorithm.h
-
-/Users/bytedance/CLionProjects/MeshWork/src/hw1/Algorithm.h
+/Users/bytedance/CLionProjects/MeshWork/src/hw2/hw2.cpp
 ../../PolyMesh/IOManager.h
 /Users/bytedance/CLionProjects/MeshWork/PolyMesh/IOManager.h
-../../PolyMesh/PolyMesh_Base.h
-/Users/bytedance/CLionProjects/MeshWork/PolyMesh/PolyMesh_Base.h
-queue
--
-
-/Users/bytedance/CLionProjects/MeshWork/src/hw1/hw1.cpp
-iostream
--
 fstream
 -
-sstream
--
-../../PolyMesh/IOManager.h
-/Users/bytedance/CLionProjects/MeshWork/PolyMesh/IOManager.h
-Algorithm.h
-/Users/bytedance/CLionProjects/MeshWork/src/hw1/Algorithm.h
-string
--
-hw1.h
-/Users/bytedance/CLionProjects/MeshWork/src/hw1/hw1.h
+hw2.h
+/Users/bytedance/CLionProjects/MeshWork/src/hw2/hw2.h
 unistd.h
 -
-stdio.h
--
 
-/Users/bytedance/CLionProjects/MeshWork/src/hw1/hw1.h
+/Users/bytedance/CLionProjects/MeshWork/src/hw2/hw2.h
 

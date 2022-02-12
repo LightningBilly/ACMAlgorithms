@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/bytedance/CLionProjects/MeshWork/main.cpp" "/Users/bytedance/CLionProjects/MeshWork/cmake-build-debug/CMakeFiles/MeshWork.dir/main.cpp.o"
   "/Users/bytedance/CLionProjects/MeshWork/src/hw1/Algorithm.cpp" "/Users/bytedance/CLionProjects/MeshWork/cmake-build-debug/CMakeFiles/MeshWork.dir/src/hw1/Algorithm.cpp.o"
   "/Users/bytedance/CLionProjects/MeshWork/src/hw1/hw1.cpp" "/Users/bytedance/CLionProjects/MeshWork/cmake-build-debug/CMakeFiles/MeshWork.dir/src/hw1/hw1.cpp.o"
+  "/Users/bytedance/CLionProjects/MeshWork/src/hw2/hw2.cpp" "/Users/bytedance/CLionProjects/MeshWork/cmake-build-debug/CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
