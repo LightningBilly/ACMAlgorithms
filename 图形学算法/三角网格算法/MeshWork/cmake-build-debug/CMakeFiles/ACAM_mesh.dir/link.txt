@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libACAM_mesh.a  CMakeFiles/ACAM_mesh.dir/PolyMesh/IOManger.cpp.o CMakeFiles/ACAM_mesh.dir/PolyMesh/PolyMesh.cpp.o CMakeFiles/ACAM_mesh.dir/PolyMesh/PolyMesh_Base.cpp.o CMakeFiles/ACAM_mesh.dir/PolyMesh/PolyMeshIterators.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libACAM_mesh.a
