@@ -57,6 +57,11 @@ void hw3()
         FaceCenter[f_id] = mesh->calculatFaceCenter(fh);
     }
 
+    /*
+     * 计算点标准差参数
+     * 把所有邻面的中点作差
+     * 最后除以面的3倍
+     */
     SigmaCenter = 0;
     for (MPolyFace* fh : mesh->polyfaces())
     {
@@ -69,6 +74,9 @@ void hw3()
     }
     SigmaCenter /= mesh->numPolygons() * 3;
 
+    /*
+     * 利用法向迭代公式计算法向
+     */
     for (int i = 0; i < NormalIterNum; i++)
     {
         for (MPolyFace* fh : mesh->polyfaces())
@@ -92,6 +100,7 @@ void hw3()
         }
     }
 
+    // 调整点位置
     for (int i = 0; i < VertexIterNum; i++)
     {
         for (MVert* vh : mesh->vertices())
@@ -111,5 +120,6 @@ void hw3()
         }
     }
 
+    // 输出网格数据
     writeMesh("result.obj", mesh);
 }
