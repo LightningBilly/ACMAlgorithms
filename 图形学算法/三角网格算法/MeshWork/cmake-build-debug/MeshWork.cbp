@@ -122,6 +122,12 @@
 		<Unit filename="/Users/bytedance/CLionProjects/MeshWork/src/hw2/hw2.h">
 			<Option target="MeshWork"/>
 		</Unit>
+		<Unit filename="/Users/bytedance/CLionProjects/MeshWork/src/hw3/hw3.cpp">
+			<Option target="MeshWork"/>
+		</Unit>
+		<Unit filename="/Users/bytedance/CLionProjects/MeshWork/src/hw3/hw3.h">
+			<Option target="MeshWork"/>
+		</Unit>
 		<Unit filename="/Users/bytedance/CLionProjects/MeshWork/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

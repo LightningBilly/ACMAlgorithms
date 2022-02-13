@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include "src/hw1/hw1.h"
 #include "src/hw2/hw2.h"
+#include "src/hw3/hw3.h"
 
 const int MAXPATH=250;
 
@@ -15,6 +16,7 @@ int main() {
     printf("The current directory is: %s\n", buffer);
 
     // hw1();
-    hw2();
+    // hw2();
+    hw3();
     return 0;
 }
