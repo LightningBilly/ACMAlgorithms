@@ -366,6 +366,33 @@ src/hw3/hw3.cpp.s:
 	$(MAKE) -f CMakeFiles/MeshWork.dir/build.make CMakeFiles/MeshWork.dir/src/hw3/hw3.cpp.s
 .PHONY : src/hw3/hw3.cpp.s
 
+src/hw4/hw4.o: src/hw4/hw4.cpp.o
+
+.PHONY : src/hw4/hw4.o
+
+# target to build an object file
+src/hw4/hw4.cpp.o:
+	$(MAKE) -f CMakeFiles/MeshWork.dir/build.make CMakeFiles/MeshWork.dir/src/hw4/hw4.cpp.o
+.PHONY : src/hw4/hw4.cpp.o
+
+src/hw4/hw4.i: src/hw4/hw4.cpp.i
+
+.PHONY : src/hw4/hw4.i
+
+# target to preprocess a source file
+src/hw4/hw4.cpp.i:
+	$(MAKE) -f CMakeFiles/MeshWork.dir/build.make CMakeFiles/MeshWork.dir/src/hw4/hw4.cpp.i
+.PHONY : src/hw4/hw4.cpp.i
+
+src/hw4/hw4.s: src/hw4/hw4.cpp.s
+
+.PHONY : src/hw4/hw4.s
+
+# target to generate assembly for a file
+src/hw4/hw4.cpp.s:
+	$(MAKE) -f CMakeFiles/MeshWork.dir/build.make CMakeFiles/MeshWork.dir/src/hw4/hw4.cpp.s
+.PHONY : src/hw4/hw4.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -402,6 +429,9 @@ help:
 	@echo "... src/hw3/hw3.o"
 	@echo "... src/hw3/hw3.i"
 	@echo "... src/hw3/hw3.s"
+	@echo "... src/hw4/hw4.o"
+	@echo "... src/hw4/hw4.i"
+	@echo "... src/hw4/hw4.s"
 .PHONY : help
 
 

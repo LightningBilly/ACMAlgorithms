@@ -13,11 +13,13 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/bytedance/CLionProjects/MeshWork/src/hw1/hw1.cpp" "/Users/bytedance/CLionProjects/MeshWork/cmake-build-debug/CMakeFiles/MeshWork.dir/src/hw1/hw1.cpp.o"
   "/Users/bytedance/CLionProjects/MeshWork/src/hw2/hw2.cpp" "/Users/bytedance/CLionProjects/MeshWork/cmake-build-debug/CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o"
   "/Users/bytedance/CLionProjects/MeshWork/src/hw3/hw3.cpp" "/Users/bytedance/CLionProjects/MeshWork/cmake-build-debug/CMakeFiles/MeshWork.dir/src/hw3/hw3.cpp.o"
+  "/Users/bytedance/CLionProjects/MeshWork/src/hw4/hw4.cpp" "/Users/bytedance/CLionProjects/MeshWork/cmake-build-debug/CMakeFiles/MeshWork.dir/src/hw4/hw4.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/local/include/eigen3"
   )
 
 # Targets to which this target links.
