@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bytedance/CLionProjects/glTriangle/MPoint3.h
+cmath
+-
+vector
+-
+iostream
+-
+assert.h
+-
+
+/Users/bytedance/CLionProjects/glTriangle/MVector3.h
+MPoint3.h
+/Users/bytedance/CLionProjects/glTriangle/MPoint3.h
+
+/Users/bytedance/CLionProjects/glTriangle/PolyMesh.cpp
+PolyMesh.h
+/Users/bytedance/CLionProjects/glTriangle/PolyMesh.h
+
+/Users/bytedance/CLionProjects/glTriangle/PolyMesh.h
+MPoint3.h
+/Users/bytedance/CLionProjects/glTriangle/MPoint3.h
+MVector3.h
+/Users/bytedance/CLionProjects/glTriangle/MVector3.h
+

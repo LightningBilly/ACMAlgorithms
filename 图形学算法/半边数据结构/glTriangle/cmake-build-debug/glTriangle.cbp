@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="glTriangle"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glTriangle">
+				<Option output="/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/glTriangle" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/glew/2.2.0_1/include/GL"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/glfw/3.3.4/include/GLFW"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/glad"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/KHR"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 glTriangle"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glTriangle/fast">
+				<Option output="/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/glTriangle" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/glew/2.2.0_1/include/GL"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/glfw/3.3.4/include/GLFW"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/glad"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/KHR"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 glTriangle/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/bytedance/CLionProjects/glTriangle/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/bytedance/CLionProjects/glTriangle/BSpline.cpp">
+			<Option target="glTriangle"/>
+		</Unit>
+		<Unit filename="/Users/bytedance/CLionProjects/glTriangle/BSpline.h">
+			<Option target="glTriangle"/>
+		</Unit>
+		<Unit filename="/Users/bytedance/CLionProjects/glTriangle/IOManager.cpp">
+			<Option target="glTriangle"/>
+		</Unit>
+		<Unit filename="/Users/bytedance/CLionProjects/glTriangle/IOManager.h">
+			<Option target="glTriangle"/>
+		</Unit>
+		<Unit filename="/Users/bytedance/CLionProjects/glTriangle/PolyMesh.cpp">
+			<Option target="glTriangle"/>
+		</Unit>
+		<Unit filename="/Users/bytedance/CLionProjects/glTriangle/PolyMesh.h">
+			<Option target="glTriangle"/>
+		</Unit>
+		<Unit filename="/Users/bytedance/CLionProjects/glTriangle/main.cpp">
+			<Option target="glTriangle"/>
+		</Unit>
+		<Unit filename="/Users/bytedance/CLionProjects/glTriangle/model.cpp">
+			<Option target="glTriangle"/>
+		</Unit>
+		<Unit filename="/Users/bytedance/CLionProjects/glTriangle/model.h">
+			<Option target="glTriangle"/>
+		</Unit>
+		<Unit filename="/Users/bytedance/CLionProjects/glTriangle/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
