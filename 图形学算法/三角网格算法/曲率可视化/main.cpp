@@ -161,15 +161,41 @@ void cal_mean_curvature(PolyMesh* const mesh, const std::vector<double> &vertexL
     std::cout << "Calculate Absolute Mean Curvature Done" << std::endl;
 }
 
+
+void cal_gaussian_curvature(PolyMesh* const mesh, const std::vector<double> &vertexLAR,std::vector<double> &gaussianCur)
+{
+    gaussianCur.assign(mesh->numVertices(), 0);
+    for (MVert* vh : mesh->vertices())
+    {
+        double angle_temp = 2 * M_PI;
+        MVector3  p_vh = vh->position();
+        for (auto voh_it = mesh->voh_iter(vh); voh_it.isValid(); ++voh_it)
+        {
+            if (!(*voh_it)->isBoundary())
+            {
+                MHalfedge* next_voh = (*voh_it)->next();
+                MVert* to_voh = (*voh_it)->toVertex(), *to_next_voh = next_voh->toVertex();
+                MVector3 p_to_voh = to_voh->position(), p_to_next_voh = to_next_voh->position();
+                double angle = vectorAngle(p_to_voh - p_vh, p_to_next_voh - p_vh);
+                angle_temp -= angle;
+            }
+        }
+        angle_temp /= vertexLAR[vh->index()];
+        gaussianCur[vh->index()] = angle_temp;
+    }
+    std::cout << "Calculate Gaussian Curvature Done" << std::endl;
+}
+
 int main(void) {
     auto r = new OBJReader();
     string writePath = "/Users/bytedance/CLionProjects/glTriangle/d1.txt";
     auto mesh = new PolyMesh();
     r->read(path, mesh);
-    std::vector<double> meanCur, absMeanCur;
+    std::vector<double> meanCur, absMeanCur,gaussianCur;
     std::vector<double> vertexLAR;
     cal_local_ave_region(mesh, vertexLAR);
     cal_mean_curvature(mesh, vertexLAR, meanCur, absMeanCur);
+    cal_gaussian_curvature(mesh, vertexLAR, gaussianCur);
     for(auto v: meanCur) {
         cout<<v<<endl;
     }
@@ -189,6 +215,7 @@ int main(void) {
         absMeanCur[i]=absMeanCur[i]*1000/m;
         cout<<absMeanCur[i]<<endl;
     }
+
     //return 0;
 /*
     auto w = new OBJWriter();
@@ -245,7 +272,7 @@ int main(void) {
         glMatrixMode(GL_PROJECTION);
         glEnable(GL_DEPTH_TEST);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        mesh->Draw(angy, angx, absMeanCur);
+        mesh->Draw(angy, angx, gaussianCur);
         for (int i=0, n=1000; i<n;i++) {
             auto rgb=getRGB(i);
             glColor3f(rgb[0], rgb[1],rgb[2]);
