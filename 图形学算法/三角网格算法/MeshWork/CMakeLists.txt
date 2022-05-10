@@ -10,4 +10,4 @@ add_executable(MeshWork
         src/hw1/Algorithm.cpp
         src/hw1/hw1.cpp
         main.cpp src/hw2/hw2.h src/hw2/hw2.cpp src/hw3/hw3.h src/hw3/hw3.cpp
-        src/hw4/hw4.h src/hw4/hw4.cpp)
+        src/hw6/hw6.h src/hw6/hw6.cpp src/hw9/hw9.h src/hw9/hw9.cpp)

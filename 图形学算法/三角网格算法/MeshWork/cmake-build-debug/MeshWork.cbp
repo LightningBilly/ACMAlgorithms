@@ -45,10 +45,10 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/local/include/eigen3"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -67,10 +67,10 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/local/include/eigen3"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
@@ -130,10 +130,16 @@
 		<Unit filename="/Users/bytedance/CLionProjects/MeshWork/src/hw3/hw3.h">
 			<Option target="MeshWork"/>
 		</Unit>
-		<Unit filename="/Users/bytedance/CLionProjects/MeshWork/src/hw4/hw4.cpp">
+		<Unit filename="/Users/bytedance/CLionProjects/MeshWork/src/hw6/hw6.cpp">
 			<Option target="MeshWork"/>
 		</Unit>
-		<Unit filename="/Users/bytedance/CLionProjects/MeshWork/src/hw4/hw4.h">
+		<Unit filename="/Users/bytedance/CLionProjects/MeshWork/src/hw6/hw6.h">
+			<Option target="MeshWork"/>
+		</Unit>
+		<Unit filename="/Users/bytedance/CLionProjects/MeshWork/src/hw9/hw9.cpp">
+			<Option target="MeshWork"/>
+		</Unit>
+		<Unit filename="/Users/bytedance/CLionProjects/MeshWork/src/hw9/hw9.h">
 			<Option target="MeshWork"/>
 		</Unit>
 		<Unit filename="/Users/bytedance/CLionProjects/MeshWork/CMakeLists.txt">

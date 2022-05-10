@@ -32,6 +32,7 @@ private:
         node[ind].left=l;
         node[ind].right=r;
         node[ind].sumVal = 0;
+        node[ind].lazyPrice = 0;
         node[ind].mid = l + r >> 1;
         if (l == r) {
             return;

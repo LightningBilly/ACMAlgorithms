@@ -522,6 +522,9 @@ namespace polymesh {
 		size_t v_size = v_loop.size();
 
 #ifndef NDEBUG
+		/*
+		 * 检测合法性，点存在没有面的边。
+		 */
 		for (size_t i = 0; i < v_size; i++)
 		{
 			if (!isBoundary(v_loop[i]))
@@ -553,6 +556,13 @@ namespace polymesh {
 
 		MHalfedge* he1 = nullptr; MHalfedge* he2 = nullptr;
 		std::vector<MHalfedge*> vec_edges;
+		/*
+		 * 创建边，标记是否为新边。
+		 * h1为从v_loop[i]出发的半边，h2反之。
+		 * 设置面的第1条边。
+		 * 设置h1的面为face.
+		 * 加入到vec_edges中。
+		 */
 		for (size_t i = 0; i < v_size; i++)
 		{
 			size_t i1 = (i + 1) % v_size;
@@ -586,6 +596,10 @@ namespace polymesh {
 		MHalfedge* he_ip, * he_in;
 		MHalfedge* he_op, * he_on;
 		MHalfedge* he_bp, * he_bn;
+		/*
+		 * 2条邻边都不是新边情况下的调整。
+		 *
+		 */
 		for (size_t i = 0; i < v_size; i++)
 		{
 			size_t ii = (i + 1) % v_size;
