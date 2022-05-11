@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/MeshWork.dir/main.cpp.o"
   "CMakeFiles/MeshWork.dir/src/hw1/Algorithm.cpp.o"
   "CMakeFiles/MeshWork.dir/src/hw1/hw1.cpp.o"
+  "CMakeFiles/MeshWork.dir/src/hw12/hw12.cpp.o"
   "CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o"
   "CMakeFiles/MeshWork.dir/src/hw3/hw3.cpp.o"
   "CMakeFiles/MeshWork.dir/src/hw6/hw6.cpp.o"

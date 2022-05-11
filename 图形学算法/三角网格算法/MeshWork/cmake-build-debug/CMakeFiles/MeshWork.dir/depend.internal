@@ -42,6 +42,7 @@ CMakeFiles/MeshWork.dir/PolyMesh/PolyMesh_Base.cpp.o
 CMakeFiles/MeshWork.dir/main.cpp.o
  /Users/bytedance/CLionProjects/MeshWork/main.cpp
  /Users/bytedance/CLionProjects/MeshWork/src/hw1/hw1.h
+ /Users/bytedance/CLionProjects/MeshWork/src/hw12/hw12.h
  /Users/bytedance/CLionProjects/MeshWork/src/hw2/hw2.h
  /Users/bytedance/CLionProjects/MeshWork/src/hw3/hw3.h
  /Users/bytedance/CLionProjects/MeshWork/src/hw5/hw5.h
@@ -72,6 +73,17 @@ CMakeFiles/MeshWork.dir/src/hw1/hw1.cpp.o
  /Users/bytedance/CLionProjects/MeshWork/src/hw1/Algorithm.h
  /Users/bytedance/CLionProjects/MeshWork/src/hw1/hw1.cpp
  /Users/bytedance/CLionProjects/MeshWork/src/hw1/hw1.h
+CMakeFiles/MeshWork.dir/src/hw12/hw12.cpp.o
+ /Users/bytedance/CLionProjects/MeshWork/Math/MPoint3.h
+ /Users/bytedance/CLionProjects/MeshWork/Math/MVector3.h
+ /Users/bytedance/CLionProjects/MeshWork/Math/Massage.h
+ /Users/bytedance/CLionProjects/MeshWork/Math/Mrgb.h
+ /Users/bytedance/CLionProjects/MeshWork/PolyMesh/IOManager.h
+ /Users/bytedance/CLionProjects/MeshWork/PolyMesh/MemoryPool.h
+ /Users/bytedance/CLionProjects/MeshWork/PolyMesh/PolyMesh.h
+ /Users/bytedance/CLionProjects/MeshWork/PolyMesh/PolyMeshIterators.h
+ /Users/bytedance/CLionProjects/MeshWork/PolyMesh/PolyMesh_Base.h
+ /Users/bytedance/CLionProjects/MeshWork/src/hw12/hw12.cpp
 CMakeFiles/MeshWork.dir/src/hw2/hw2.cpp.o
  /Users/bytedance/CLionProjects/MeshWork/Math/MPoint3.h
  /Users/bytedance/CLionProjects/MeshWork/Math/MVector3.h

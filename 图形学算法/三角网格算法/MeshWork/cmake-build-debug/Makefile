@@ -312,6 +312,33 @@ src/hw1/hw1.cpp.s:
 	$(MAKE) -f CMakeFiles/MeshWork.dir/build.make CMakeFiles/MeshWork.dir/src/hw1/hw1.cpp.s
 .PHONY : src/hw1/hw1.cpp.s
 
+src/hw12/hw12.o: src/hw12/hw12.cpp.o
+
+.PHONY : src/hw12/hw12.o
+
+# target to build an object file
+src/hw12/hw12.cpp.o:
+	$(MAKE) -f CMakeFiles/MeshWork.dir/build.make CMakeFiles/MeshWork.dir/src/hw12/hw12.cpp.o
+.PHONY : src/hw12/hw12.cpp.o
+
+src/hw12/hw12.i: src/hw12/hw12.cpp.i
+
+.PHONY : src/hw12/hw12.i
+
+# target to preprocess a source file
+src/hw12/hw12.cpp.i:
+	$(MAKE) -f CMakeFiles/MeshWork.dir/build.make CMakeFiles/MeshWork.dir/src/hw12/hw12.cpp.i
+.PHONY : src/hw12/hw12.cpp.i
+
+src/hw12/hw12.s: src/hw12/hw12.cpp.s
+
+.PHONY : src/hw12/hw12.s
+
+# target to generate assembly for a file
+src/hw12/hw12.cpp.s:
+	$(MAKE) -f CMakeFiles/MeshWork.dir/build.make CMakeFiles/MeshWork.dir/src/hw12/hw12.cpp.s
+.PHONY : src/hw12/hw12.cpp.s
+
 src/hw2/hw2.o: src/hw2/hw2.cpp.o
 
 .PHONY : src/hw2/hw2.o
@@ -450,6 +477,9 @@ help:
 	@echo "... src/hw1/hw1.o"
 	@echo "... src/hw1/hw1.i"
 	@echo "... src/hw1/hw1.s"
+	@echo "... src/hw12/hw12.o"
+	@echo "... src/hw12/hw12.i"
+	@echo "... src/hw12/hw12.s"
 	@echo "... src/hw2/hw2.o"
 	@echo "... src/hw2/hw2.i"
 	@echo "... src/hw2/hw2.s"

@@ -7,6 +7,7 @@
 #include "src/hw5/hw5.h"
 #include "src/hw6/hw6.h"
 #include "src/hw9/hw9.h"
+#include "src/hw12/hw12.h"
 
 const int MAXPATH=250;
 
@@ -24,6 +25,8 @@ int main() {
     // tutte_parameterization();
     // arap_parameterization();
     // arap_deformation();
-    qem_simplification();
+    // qem_simplification();
+
+    delaunay_trianglation();
     return 0;
 }
