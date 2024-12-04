@@ -1,0 +1,125 @@
+
+
+#include <iostream>
+#include <stdio.h>
+#include <queue>
+#include <string.h>
+#include <stack>
+#include <vector>
+#include <map>
+#include <algorithm>
+#include <assert.h>
+
+using namespace std;
+
+typedef long long lld;
+
+
+
+class KMP {
+	vector<int> next;
+	string pattern;
+
+public:
+	vector<int> makeNext(string needle);
+	vector<int> find(string s);
+};
+
+// a b a c a b a
+// 0 0 1 0 1 2 3
+
+vector<int> KMP::makeNext(string needle) {
+	pattern = needle;
+	next.assign(pattern.length(), 0);
+
+	for (int i = 1, j = 0; i < needle.length(); ++i) {
+		for (;j > 0 && needle[j] != needle[i];) { // 这里一定要循环，举例 aaab
+			j = next[j - 1];
+		}
+
+		if (needle[j] == needle[i]) {
+			j++;
+		}
+		next[i] = j;
+	}
+
+	return next;
+}
+
+
+vector<int> KMP::find(string s){
+	int j = 0;
+	vector<int> res;
+	for (int i=0;i<s.length();++i) {
+		char c = s[i];
+		for (; j > 0 && c != pattern[j];) { // 不相等就把模式串往后移，直到相等或从头开始
+			j = next[j - 1];
+		}
+		if (c == pattern[j]) { // 比较下一个
+			j++;
+		}
+		if (j == pattern.length()) {  // 完全找到模式串
+			res.push_back(i - pattern.length() + 1); // 添加结果
+			//if(pattern.length()==3) cout << "id : "<<res.back() << endl;
+			j = 0;  // 查询下一处, 不重叠就置为0
+			// j = next[j-1];
+		}
+	}
+
+	return res;
+}
+
+void solve() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n, l, r;
+        cin >> n>>l>>r;
+		string s;
+		cin >> s;
+
+		KMP kmp;
+
+		int left = 0, right = s.length()/l;
+		while (left < right) {
+			int mid = (left + right) / 2 + (left + right)%2;
+			kmp.makeNext(s.substr(0, mid));
+			auto res = kmp.find(s);
+			if (res.size() >= r && res[0] == 0) {
+				left = mid;
+			}
+			else {
+				right = mid - 1;
+			}
+		}
+
+		cout << left << endl;
+
+    }
+}
+
+
+int main() {
+    solve();
+    return 0;
+}
+/*
+7
+3 3 3
+aba
+3 3 3
+aaa
+7 2 2
+abacaba
+9 4 4
+abababcab
+10 1 1
+codeforces
+9 3 3
+abafababa
+5 3 3
+zpozp
+
+
+
+ */
